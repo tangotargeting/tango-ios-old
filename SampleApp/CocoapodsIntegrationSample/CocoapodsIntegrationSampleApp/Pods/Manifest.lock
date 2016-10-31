@@ -1,0 +1,21 @@
+PODS:
+  - Publistats (1.0.0)
+
+DEPENDENCIES:
+  - Publistats (from `https://bitbucket.org/tango-team/tango-ios-sample.git`)
+
+EXTERNAL SOURCES:
+  Publistats:
+    :git: https://bitbucket.org/tango-team/tango-ios-sample.git
+
+CHECKOUT OPTIONS:
+  Publistats:
+    :commit: 2e8d5cce2bbd61208630956874529ffb495ed00c
+    :git: https://bitbucket.org/tango-team/tango-ios-sample.git
+
+SPEC CHECKSUMS:
+  Publistats: 189421849069f743b585c857fa10b08039d1cbd6
+
+PODFILE CHECKSUM: 644c76073c6a2b67df0ef5e21ee21671141acf7d
+
+COCOAPODS: 1.0.1
