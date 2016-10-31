@@ -4,10 +4,12 @@
 
 ———— Instalation —————
 
-Manually:
-You should add to your project Tango.framework and Tango.bundle files from here [https://github.com/tangotargeting/tango-ios.git] by drag and drop. After that follow "How to use" guide.
+*** Manually ***
 
-Add framework using CocoaPods:
+Download Tango archive from here [https://github.com/tangotargeting/tango-ios/archive/0.0.1.zip] unzip it and than add Tango.framework and Tango.bundle files to your project by drag and drop. After that follow "How to use" guide.
+
+*** Add framework using CocoaPods ***
+
 CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. See the "Getting Started" guide (https://guides.cocoapods.org/using/getting-started.html) for more information. You can install it with the following command:
 
 $ gem install cocoapods
@@ -19,7 +21,7 @@ $ pod init
 In project folder it will appear a file called Podfile. Open it and integrate Tango by typing:
 
 target 'TargetName' do
-pod 'Tango', :git => 'https://github.com/tangotargeting/tango-ios.git'
+pod 'Tango', '~> 0.0.1'
 
 end
 

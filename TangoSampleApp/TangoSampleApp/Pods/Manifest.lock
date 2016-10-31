@@ -1,0 +1,12 @@
+PODS:
+  - Tango (0.0.1)
+
+DEPENDENCIES:
+  - Tango (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  Tango: f7c236ec014980a8ffc19a38010bac2e5253e7c9
+
+PODFILE CHECKSUM: 53b59b48e73ff09a0703de3bbb139ae3cdc2be70
+
+COCOAPODS: 1.0.1
