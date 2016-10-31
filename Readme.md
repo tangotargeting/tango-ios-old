@@ -46,43 +46,50 @@ Close your project, go to your project location on disk and open the workspace t
 
 After adding the framework into the project by following the installation guide, for using the framework you should follow this steps:
 
-1) Open your project AppDelegate.m file and in `didFinishLaunchingWithOptions` method register for local notifications:
+1) Open your project AppDelegate.m file and import the Tango framework
 
 ```
-UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | 								 UIUserNotificationTypeAlert;
-    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types 											                          categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+#import <Tango/Tango.h>
 ```
 
-2) After that, you should create an array with your campaign tags:
+2) In the `didFinishLaunchingWithOptions` method register for local notifications:
+
+```
+UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+```
+
+3) After that, you should create an array with your campaign tags:
 
 ```
 NSArray *tags = @[@"myCampaignTag1",@"myCampaignTag2"];
 ```
 
-3) Next step is to initialize SDK with API key and tags by using `initializeWithAPIKey` method. If you don't have an API Key please follow [Optain API Key](#obtain-api-key) guide.	For using the library you should add the following import: 
-	
+4) Next step is to initialize SDK with API key and tags by using `initializeWithAPIKey` method. If you don't have an API Key please follow [Optain API Key](#obtain-api-key) guide.	
+
 ```
-#import <Tango/Tango.h>
 // Initialize with API key
 [Tango initializeWithAPIKey:@"yourApiKey" tags:tags];
 ```
 
-4) Now that the sdk is initialized we should Handle launching from a notification by adding:
+5) Now that the sdk is initialized, add the following method:
 
 ```
 [Tango application:application didFinishLaunchingWithOptions:launchOptions];
 ```
 
-5) In `application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification` method we should handle Tango notification by adding: 
+6) In `application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification` method we should handle Tango notifications by adding:
 
 ```
-[Tango application:application didReceiveLocalNotification:localNotification];
+- (void)application:(UIApplication) application didReceiveLocalNotification:(UILocalNotification )localNotification {
+   [Tango application:application didReceiveLocalNotification:localNotification];
+}
 ```
 
-6) If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription, for allowing the app to use location service.
+7) If you are going to use a location campaign you need to add in your `info.plist` file this key `NSLocationAlwaysUsageDescription`, for allowing the app to use location service.
 
-7) Final step is for allowing SDK to refresh campaign, for this add the following method to `AppDelegate.m` file:
+8) Allow the SDK to refresh the campaigns, by adding the following method in the `AppDelegate.m` file:
 
 ```
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -93,4 +100,4 @@ NSArray *tags = @[@"myCampaignTag1",@"myCampaignTag2"];
 }
 ```
 
-8) Build and run :)
+9) Build and run :)
