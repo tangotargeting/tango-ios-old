@@ -2,7 +2,7 @@
 
 # <a name="obtain-api-key"></a>Obtain the API key
 
-You can find the API Key in on the [iOS integration page](http://app=demo.integration/ios) in the Tango Console. 
+You can find the API Key in on the [iOS integration page](https://app-demo.tangotargeting.com/integration/ios) in the Tango Console. 
 
 # Installation
 
