@@ -61,7 +61,9 @@ After adding the framework into the project by following the installation guide,
 
 	[Tango application:application didReceiveLocalNotification:localNotification]; // TODO: Handle this in tango SDK.
 
-6) Final step is for allowing SDK to refresh campaign, for this add the following method to AppDelegate.m file:
+6) If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription, for allowing the app to use location service.
+
+7) Final step is for allowing SDK to refresh campaign, for this add the following method to AppDelegate.m file:
 
 	- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)	(UIBackgroundFetchResult))completionHandler {
   	  // Allow tango SDK to refresh campaing
