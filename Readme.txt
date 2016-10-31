@@ -40,12 +40,9 @@ After adding the framework into the project by following the installation guide,
     UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types 											                          categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
 
-2) After that, you should save your campaign tags in NSUserDefaults:
-	NSArray *tags = [[NSUserDefaults standardUserDefaults] valueForKey:@"YourPrefferedKeyForTags"];
-    if (tags == nil) {
-        tags = @[@"myCampaignTag1",@"myCampaignTag2"];
-        [[NSUserDefaults standardUserDefaults] setObject:tags forKey:@"YourPrefferedKeyForTags"];
-    }
+2) After that, you should create an array with your campaign tags:
+
+	NSArray *tags = @[@"myCampaignTag1",@"myCampaignTag2"];
 
 3) Next step is to initialize SDK with API key and tags by using initializeWithAPIKey method. If you don't have an API Key please follow "Optain API Key" guide.
 	For using the library you should add the following import: #import <Tango/Tango.h>
