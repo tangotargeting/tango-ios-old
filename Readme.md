@@ -40,7 +40,7 @@ After filling Podfile save it and run following command in the Terminal:
 $ pod install
 ```
 
-Close your project , go to your project location on disk and open the workspace the newly created `.xcworkspace` file inside your project directory. Now the framework can be used, and for that please follow "How to use" guide.
+Close your project, go to your project location on disk and open the workspace the newly created `.xcworkspace` file inside your project directory. Now the framework can be used, and for that please follow "How to use" guide.
 
 # <a name="how-to"></a>How to use
 
