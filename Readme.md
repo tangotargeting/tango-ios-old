@@ -27,9 +27,9 @@ $ pod init
 In project folder it will appear a file called Podfile. Open it and integrate Tango by typing:
 
 ```
-target \'TargetName\' do
+target 'TargetName' do
 
-pod \'Tango\', \'~> 0.0.1\'
+pod 'Tango', '~> 0.0.1'
 
 end
 ```
@@ -70,7 +70,7 @@ NSArray *tags = @[@"myCampaignTag1",@"myCampaignTag2"];
 
 ``` objc
 // Initialize with API key
-[Tango initializeWithAPIKey:@"'. $company->key .'" tags:tags];
+[Tango initializeWithAPIKey:@"apikey" tags:tags];
 ```
 
 **5. Finally, now that the sdk is initialized, add the following method:**
