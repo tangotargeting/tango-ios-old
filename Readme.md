@@ -29,7 +29,7 @@ In project folder it will appear a file called Podfile. Open it and integrate Ta
 ```
 target 'TargetName' do
 
-pod 'Tango', '~> 0.0.1'
+pod 'Tango', '~> 0.8.1'
 
 end
 ```
@@ -52,55 +52,31 @@ After adding the framework into the project by following the installation guide,
 #import <Tango/Tango.h>
 ```
 
-**2. In the `didFinishLaunchingWithOptions` method register for local notifications:**
-
-``` objc
-UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-[[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
-```
-
-**3. After that, you should create an array with your campaign tags:**
-
-``` objc
-NSArray *tags = @[@"myCampaignTag1",@"myCampaignTag2"];
-```
-
-**4. Next step is to initialize SDK with API key and tags by using `initializeWithAPIKey` method.**
+**2. In the `didFinishLaunchingWithOptions` initialize SDK with API key by using `initializeWithAPIKey` method.**
 
 ``` objc
 // Initialize with API key
-[Tango initializeWithAPIKey:@"apikey" tags:tags];
+[Tango initializeWithAPIKey:@"apikey"];
 ```
 
-**5. Finally, now that the sdk is initialized, add the following method:**
-
-``` objc
-[Tango application:application didFinishLaunchingWithOptions:launchOptions];
-```
-
-**6. In `application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification` method we should handle Tango notification by adding:**
+**3. In `application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification` method we should handle Tango notification by adding:**
 
 ``` objc
 - (void)application:(UIApplication) application didReceiveLocalNotification:(UILocalNotification )localNotification {
     [Tango application:application didReceiveLocalNotification:localNotification];
 }
 ```
-
-**7. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription, for allowing the app to use location service.**
-
-**8. Final step is for allowing SDK to refresh campaign, for this add the following method to `AppDelegate.m` file:**
+**3. After initilizing the SDK if you want to add a user to a specific segment you should call  `addSegments:(NSArray<NSStrign *> *)segments` method, you can add this whenever you want:**
 
 ``` objc
-- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-// Allow tango SDK to refresh campaing
-[Tango syncCampaingsWithCompletion:^{
-    completionHandler(UIBackgroundFetchResultNewData);
-}];
+- (void)yourCustomMethod {
+    [Tango addSegments:@[@"firstSegment",@"secondSegment"]];
 }
 ```
 
-**9. Build and run :)**
+**4. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription, for allowing the app to use location service and user requestLocationAuthorization method, or the initilizer initilizeWithApiKey:andLocationAuthorization.**
+
+**5. Build and run :)**
 
 ## License
 
