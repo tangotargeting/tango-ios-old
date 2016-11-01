@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ehq-kO-rEB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tango Sample App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Tango Sample App" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,10 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV0-TH-v6V">
+                                <rect key="frame" x="158" y="108" width="284" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XV0-TH-v6V" secondAttribute="height" multiplier="142:15" id="rf8-3P-rT4"/>
+                                </constraints>
+                                <state key="normal" title="Trigger Campaign With &lt;your trigger&gt;"/>
+                                <connections>
+                                    <action selector="triggerCampaign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygQ-uo-mED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-4d-w3T">
+                                <rect key="frame" x="158" y="177" width="284" height="30"/>
+                                <state key="normal" title="Add Segments"/>
+                                <connections>
+                                    <action selector="addSegments:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oW-6M-pFh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XV0-TH-v6V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="91D-tb-cO2"/>
+                            <constraint firstItem="XV0-TH-v6V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TG7-uU-Ank"/>
+                            <constraint firstItem="P9X-4d-w3T" firstAttribute="width" secondItem="XV0-TH-v6V" secondAttribute="width" id="ZRv-I0-QVp"/>
+                            <constraint firstItem="P9X-4d-w3T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hko-l3-4Mh"/>
+                            <constraint firstItem="P9X-4d-w3T" firstAttribute="top" secondItem="XV0-TH-v6V" secondAttribute="bottom" constant="39" id="r4n-MI-aWw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tango Sample App" id="jFx-LS-Tkp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="317"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="83g-Xk-qWE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ehq-kO-rEB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="opT-3g-ypq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.050980392159999999" green="0.39607843139999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pSr-Sr-sbL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tow-9D-PA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="246" y="317"/>
         </scene>

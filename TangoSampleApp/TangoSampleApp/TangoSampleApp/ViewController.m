@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Tango/Tango.h>
 
 @interface ViewController ()
 
@@ -22,6 +23,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)triggerCampaign:(id)sender {
+    [Tango trigger:@"yourTrigger"];
+}
+
+- (IBAction)addSegments:(id)sender {
+    [Tango addSegments:@[@"yourListOfTags"]]; // Each tag should be a separate object in the array.
 }
 
 @end
