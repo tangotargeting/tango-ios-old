@@ -22,6 +22,8 @@
  * Tango can not be copied and/or distributed without the express
  * permission of Tango Targeting Inc.
 **************************************************************************</string>
+			<key>License</key>
+			<string>COMMERCIAL</string>
 			<key>Title</key>
 			<string>Tango</string>
 			<key>Type</key>

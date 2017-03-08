@@ -15,24 +15,23 @@ extern NSString *const TANCustomActionNotification;
 
 @interface Tango : NSObject
 
-/** This method is used for initialize the sdk with apiKey and tags
+/** This method is used for initialize the sdk with apiKey
  *  @param apiKey a string with apiKey
- *  @param tags an array of strings representing the tags for the campaign.
  */
-+ (void)initializeWithAPIKey:(NSString *)apiKey tags:(NSArray *)tags;
++ (void)initializeWithAPIKey:(NSString *)apiKey;
 
 /** This method is used for initialize the SDK. Use this method if you want to requestLocationAuthorization when you initiliaze SDK for a location campaign. You can stil requestLocationAuthorization after by calling [Tango requestLocationAlwaysAuthorization].
  *
  *  @param apiKey a string with apiKey
- *  @param tags an array of strings representing the tags for the campaign.
  *  @param requestLocationAuthorization a boolean that indicates if you should request location authorization when SDK is initialize.
  */
-+ (void)initializeWithAPIKey:(NSString *)apiKey tags:(NSArray *)tags requestLocationAuthorization:(BOOL)requestLocationAuthorization;
++ (void)initializeWithAPIKey:(NSString *)apiKey andLocationAuthorization:(BOOL)requestLocationAuthorization;
 
-/** Use this method to sync campaigns with your device.
- *  @param completionBlock.
+/** Use this method to add new segments for your device
+ *
+ *  @param NSArray<NSString *> an array of strings, each strings represent a segment.
  */
-+ (void)syncCampaingsWithCompletion:(void (^)())completion;
++ (void)addSegments:(NSArray<NSString *> *)segments;
 
 /** Call this method in your AppDelegate method for handling Tango notification inside the SDK.
  *
@@ -41,22 +40,15 @@ extern NSString *const TANCustomActionNotification;
  */
 + (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)localNotification;
 
-/** Call this method in your AppDelegate method for handling Tango notification inside the SDK when app is lauched.
- *
- *  @param application the application
- *  @param launchOptions
- */
-+ (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
-
-/** Use this method when you have a custom trigger campaign on your device an you want to trigger it on your acction.
+/** Use this method when you have a custom trigger campaign on your device an you want to trigger it on your action.
  *
  * @param triggerKey the string that you defined as a triggerKey when you created the campaign.
  */
-+ (void)trigger:(NSString *)triggerKey;
++ (void)trigger:(NSString *)customTrigger;
 
-/** Use this method to see the profile page were you cand enable/disable functionalities.Or opt in/out for Tango notifications.
+/** Use this method to see the user profile page were you can enable/disable functionalities.Or opt in/out for Tango notifications.
  */
-+ (void)infoPage;
++ (void)showUserProfile;
 
 /** Use this method when you want to request location authorization for location campaigns.
  */
