@@ -185,6 +185,6 @@ Tango.registerSegments(segments: ["firstSegment", "secondSegment"])
 
 ## License
 
-Copyright 2016 Tango Targeting, Inc.
+Copyright 2017 Tango Targeting, Inc.
 
 [1]: http://tangotargeting.com
