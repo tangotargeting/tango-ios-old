@@ -48,7 +48,7 @@ Add in your podfile the new target for notification extension and add TangoRichN
 ```
 target 'NotificationServiceExtesion-Target-Name' do
 use_frameworks!
-pod 'TangoRichNotification', '~> 0.0.1'
+pod 'TangoRichNotification', '~> 1.0.0'
 end
 ```
 After filling Podfile save it and run following command in the Terminal:
