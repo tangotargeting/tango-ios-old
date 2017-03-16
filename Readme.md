@@ -5,7 +5,11 @@ Communication chanel for your existing customers
 For more information please see [the website][1].
 
 ## Installation
-
+### Install manually
+1. Download latest version of Tango framework from [here](https://github.com/tangotargeting/tango-ios) and latest version of TangoRichNotification framework from [here](https://github.com/tangotargeting/TangoRichNotifications/).
+2. Drag Tango.framework file into the project and for iOS10 rich notification after you created an NotificationServiceExtension using iOS 10 Rich Notifications guide from this file, drag TangoRichNotification.framework into your app extension group.
+3. Go to your_projectTarget -> General and hit + button from Embedded Binaries and add Tango framework.
+4. Before App Store submission [strip framework](#Strip_Framework_before_App_Store_submission)
 ### Install with CocoaPods
 
 CocoaPods is a dependency manager, which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Getting Started](https://guides.cocoapods.org/using/getting-started.html) guide for more information. You can install it with the following terminal command:
@@ -36,6 +40,13 @@ $ pod install
 ```
 
 Close your project, go to your project location on disk and open the workspace the newly created `.xcworkspace` file inside your project directory. Now the framework can be used, and for that please follow "How to use" guide.
+
+### Strip Framework before App Store submission
+This is an universal framework, so due to [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) we need to strip framework for unused architectures, for that go to BuilPhases add a new “Run Script Phase” in your app’s target and paste the following snippet in the script text field:
+
+```
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tango.framework/Scripts/strip-simulator-arch.sh"
+```
 
 ### iOS 10 Rich Notifications
 
@@ -101,7 +112,9 @@ After that you should fill the form with your app data:
 
 After adding the framework into the project by following the installation guide, for using the framework you should follow this steps:
 
-**1. Open your project AppDelegate.m file and import the Tango framework**
+**1.Tango framework**
+
+*1. Open your project AppDelegate.m file and import the Tango framework*
 
 ``` objc
 import Tango
@@ -116,7 +129,7 @@ Also for iOS 10 only you should add UNUserNotificationCenterDelegate in app dele
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {}
 ```
 
-**2. In the `didFinishLaunchingWithOptions`, setup notification delegate (iOS 10 only) and initialize SDK with API key by using `initialize` method.**
+*2. In the `didFinishLaunchingWithOptions`, setup notification delegate (iOS 10 only) and initialize SDK with API key by using `initialize` method.*
 
 ``` objc
 // iOS 10 only
@@ -126,7 +139,7 @@ UNUserNotificationCenter.current().delegate = self
 Tango.initialize(tango: "apiKey")
 ```
 
-**3. After that you should implement the following delegate methods.**
+*3. After that you should implement the following delegate methods.*
 ``` objc
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 Tango.application(application, didReceiveRemoteNotification: userInfo)
@@ -171,7 +184,7 @@ Tango.userNotificationCenter(center, willPresent: notification, withCompletionHa
 }
 ```
 
-**3. After initilizing the SDK if you want to add a user to a specific segment you should call  `registerSegments(segments: [String])` method, you can add this whenever you want:**
+*4. After initilizing the SDK if you want to add a user to a specific segment you should call  `registerSegments(segments: [String])` method, you can add this whenever you want:*
 
 ``` objc
 func yourCustomMethod() {
@@ -179,9 +192,33 @@ Tango.registerSegments(segments: ["firstSegment", "secondSegment"])
 }
 ```
 
-**4. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription.**
+*5. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription.*
 
-**5. Build and run :)**
+**2. TangoRichNotification framework**
+
+*1. After creating the Notification service extension, go to NotificationService class:*
+``` objc
+import TangoRichNotification
+```
+
+*2. In `didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)` method remove:*
+``` objc
+if let bestAttemptContent = bestAttemptContent {
+// Modify the notification content here...
+bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
+contentHandler(bestAttemptContent)
+}
+```
+and add 
+``` objc
+if let bestAttemptContent = bestAttemptContent {
+TangoRichNotification.setupRichContent(content: bestAttemptContent, completionHandler: { (content) in
+contentHandler(content)
+})
+}
+```
+
+**3. Build and run :)**
 
 ## License
 
