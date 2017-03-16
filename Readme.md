@@ -9,7 +9,7 @@ For more information please see [the website][1].
 1. Download latest version of Tango framework from [here](https://github.com/tangotargeting/tango-ios) and latest version of TangoRichNotification framework from [here](https://github.com/tangotargeting/TangoRichNotifications/).
 2. Drag Tango.framework file into the project and for iOS10 rich notification after you created an NotificationServiceExtension using iOS 10 Rich Notifications guide from this file, drag TangoRichNotification.framework into your app extension group.
 3. Go to your_projectTarget -> General and hit + button from Embedded Binaries and add Tango framework.
-4. Before App Store submission [strip framework](#Strip_Framework_before_App_Store_submission)
+4. Before App Store submission follow strip framework guide.
 ### Install with CocoaPods
 
 CocoaPods is a dependency manager, which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Getting Started](https://guides.cocoapods.org/using/getting-started.html) guide for more information. You can install it with the following terminal command:
