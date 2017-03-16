@@ -25,7 +25,7 @@ In project folder it will appear a file called Podfile. Open it and integrate Ta
 ```
 target 'TargetName' do
 use_frameworks!
-pod 'Tango', '~> 0.9.1'
+pod 'Tango', '~> 1.0.0'
 end
 ```
 
