@@ -3,13 +3,20 @@
 Communication chanel for your existing customers
 
 For more information please see [the website][1].
+## Requirements
+
+- iOS 9.0+ if you use only Tango framework
+- iOS 10.0+ if you use both Tango and TangoRichNotification framework
+- Xcode 8.1+
+- Swift 3.0+
 
 ## Installation
 ### Install manually
 1. Download latest version of Tango framework from [here](https://github.com/tangotargeting/tango-ios) and latest version of TangoRichNotification framework from [here](https://github.com/tangotargeting/TangoRichNotifications/).
 2. Drag Tango.framework file into the project and for iOS10 rich notification after you created an NotificationServiceExtension using iOS 10 Rich Notifications guide from this file, drag TangoRichNotification.framework into your app extension group.
 3. Go to your_projectTarget -> General and hit + button from Embedded Binaries and add Tango framework.
-4. Before App Store submission follow strip framework guide.
+4. Before App Store submission you should strip the framework, for that read [this](#strip-framework-before-app-store-submission) guide.
+
 ### Install with CocoaPods
 
 CocoaPods is a dependency manager, which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Getting Started](https://guides.cocoapods.org/using/getting-started.html) guide for more information. You can install it with the following terminal command:
@@ -41,7 +48,7 @@ $ pod install
 
 Close your project, go to your project location on disk and open the workspace the newly created `.xcworkspace` file inside your project directory. Now the framework can be used, and for that please follow "How to use" guide.
 
-### Strip Framework before App Store submission
+## Strip Framework before App Store submission
 This is an universal framework, so due to [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) we need to strip framework for unused architectures, for that go to BuilPhases add a new “Run Script Phase” in your app’s target and paste the following snippet in the script text field:
 
 ```
