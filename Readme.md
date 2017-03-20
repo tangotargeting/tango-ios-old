@@ -1,21 +1,24 @@
 # Tango targeting
 
-Communication chanel for your existing customers
+Mobile engagement automation
 
 For more information please see [the website][1].
 ## Requirements
 
-- iOS 9.0+ if you use only Tango framework
+- iOS 9.0+ for Tango framework only
 - iOS 10.0+ if you use both Tango and TangoRichNotification framework
 - Xcode 8.1+
 - Swift 3.0+
 
 ## Installation
 ### Install manually
-1. Download latest version of Tango framework from [here](https://github.com/tangotargeting/tango-ios) and latest version of TangoRichNotification framework from [here](https://github.com/tangotargeting/TangoRichNotifications/).
-2. Drag Tango.framework file into the project and for iOS10 rich notification after you created an NotificationServiceExtension using iOS 10 Rich Notifications guide from this file, drag TangoRichNotification.framework into your app extension group.
-3. Go to your_projectTarget -> General and hit + button from Embedded Binaries and add Tango framework.
-4. Before App Store submission you should strip the framework, for that read [this](#strip-framework-before-app-store-submission) guide.
+1. Download latest version of Tango framework from [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/tangotargeting/tango-ios/tree/master/Tango.framework).
+2. Drag Tango.framework file into the root project group.
+3. Add Tango framework to Embedded binaries. Go to your_projectTarget -> General and hit + button from Embedded Binaries to add Tango framework.
+4. Created an iOS 10 NotificationServiceExtension using [iOS 10 Rich Notifications guide](#ios-10-rich-notifications) from this file.
+5. Download [TangoRichNotification.framework](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/tangotargeting/TangoRichNotifications/tree/master/TangoRichNotification.framework)
+5. Drag TangoRichNotification.framework into your notification extension group.
+6. Strip the framework before App Store submission, read [this](#strip-framework-before-app-store-submission) guide for more details.
 
 ### Install with CocoaPods
 
@@ -62,6 +65,7 @@ The library has support for iOS 10 notifications attachments, you can add images
 Create a new iOS target in Xcode (File -> New -> Target) and select the Notification Service Extension type
 ![NotificationServiceExtension image](https://github.com/tangotargeting/tango-ios/blob/master/Resources/NotificationServiceExtension.png?raw=true)
 
+## For CocoaPods only
 Add in your podfile the new target for notification extension and add TangoRichNotification framework, to do this add the following lines to your podspec:
 ```
 target 'NotificationServiceExtesion-Target-Name' do
