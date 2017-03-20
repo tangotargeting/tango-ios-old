@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TangoSampleAppNotificationExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C4FE7BB01DC76C2F007EED9F</key>
+		<key>C4A1F3FA1E80370A0010D1EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4A1F4131E8037900010D1EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

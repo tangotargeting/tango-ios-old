@@ -1,12 +1,15 @@
 PODS:
-  - Tango (0.8.1)
+  - Tango (1.0.0)
+  - TangoRichNotification (1.0.0)
 
 DEPENDENCIES:
-  - Tango (~> 0.8.1)
+  - Tango (~> 1.0.0)
+  - TangoRichNotification (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  Tango: 58230335ffaa0c58f1db8af061259611e8d7cf0f
+  Tango: 3207155a98fe0bb92f6f7d8c3acb67d9a9294b30
+  TangoRichNotification: 58cb32d62044ba3bdf27af8cd9941c19522b20c0
 
-PODFILE CHECKSUM: aa971b6eb5f8b6513723212939e80d206f7451cc
+PODFILE CHECKSUM: a9f5a7abb985b35382d370207444475c5531525c
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1.beta.1

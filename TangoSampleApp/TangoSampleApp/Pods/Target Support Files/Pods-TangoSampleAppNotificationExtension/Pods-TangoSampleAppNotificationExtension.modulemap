@@ -1,0 +1,6 @@
+framework module Pods_TangoSampleAppNotificationExtension {
+  umbrella header "Pods-TangoSampleAppNotificationExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

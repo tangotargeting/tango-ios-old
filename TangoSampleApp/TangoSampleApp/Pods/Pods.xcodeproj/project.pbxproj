@@ -7,77 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B9E42D83F6EC0D26DF268F71D6D3EAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		AC0DC67503143F4D11AC6ABBC965807A /* Pods-TangoSampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 815A05B0A71EF1502F987EF06D171F6B /* Pods-TangoSampleApp-dummy.m */; };
+		3F53E9D8A5681BA97969E378235A2C4B /* Pods-TangoSampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0BE18E778779422916143FAE3FC070 /* Pods-TangoSampleApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		861FC82E16FF08F333619E2E20E90C6D /* Pods-TangoSampleAppNotificationExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B653756E299EF26EB3532814FBF5DDDC /* Pods-TangoSampleAppNotificationExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		883EBB0E15C22B367694400FC52BEAC0 /* Pods-TangoSampleAppNotificationExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E654165D80FCDA48F67A0BDC5F0D9B2 /* Pods-TangoSampleAppNotificationExtension-dummy.m */; };
+		CC2C3F3048E27C1D9B9A9BB61D7A6510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		EE3F85ECD56C60272BC94891AF044817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FEB3B2219249938D7B635821BC4B057F /* Pods-TangoSampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C67029CBC424EAA11A2DFD21AF1B1EDA /* Pods-TangoSampleApp-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		419ED50D2CF1026210513ACA58D01D01 /* libPods-TangoSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TangoSampleApp.a"; path = "libPods-TangoSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44F210C3D0AAEE5AD630617C8D7DEC85 /* Pods-TangoSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		50F3B70C0C2E378B0221E4F581510D3E /* Tango.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tango.framework; sourceTree = "<group>"; };
-		815A05B0A71EF1502F987EF06D171F6B /* Pods-TangoSampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TangoSampleApp-dummy.m"; sourceTree = "<group>"; };
-		8B7B5993133722FEC875D9D55701C50F /* Pods-TangoSampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TangoSampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9233ACEDDA1B82F27A0CE2A39BCEC964 /* Tango.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Tango.bundle; sourceTree = "<group>"; };
+		01FF77ABB365589CCABCAAEE74107553 /* Pods-TangoSampleAppNotificationExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TangoSampleAppNotificationExtension.modulemap"; sourceTree = "<group>"; };
+		0BD192DA2E31BA4F39638559527B9245 /* Pods-TangoSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0CB76A536042B09C515F4E9D767B4581 /* Pods-TangoSampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TangoSampleApp-resources.sh"; sourceTree = "<group>"; };
+		21B469801BE599E7BE94B4691A1456FD /* Tango.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tango.framework; sourceTree = "<group>"; };
+		21E54439C51161BC6325FBDD5C82A6DF /* Pods-TangoSampleAppNotificationExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TangoSampleAppNotificationExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23E9203BB1FDE796E62D3130A1CE845F /* TangoRichNotification.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TangoRichNotification.framework; sourceTree = "<group>"; };
+		296E6836F82CB0CCB47D94C5E746E8D8 /* Pods_TangoSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TangoSampleApp.framework; path = "Pods-TangoSampleApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		381DF0ABCE7BA5937FA19578E8380302 /* Pods_TangoSampleAppNotificationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TangoSampleAppNotificationExtension.framework; path = "Pods-TangoSampleAppNotificationExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1F1412C735728574E0489BA192E1F6 /* Pods-TangoSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		5C3BEB114CF6A457EAA2B707FC1C278A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77A8EA0F9F5CAD279E03C3FD49BB0BD1 /* Pods-TangoSampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TangoSampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7AB8385AD2A2CD2019226418CD73257D /* Pods-TangoSampleAppNotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleAppNotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
+		7C4A604FEFE22D902087D401DC761B02 /* Pods-TangoSampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TangoSampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		821E680B3071B56BE2532C960FAAC1E9 /* Pods-TangoSampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TangoSampleApp.modulemap"; sourceTree = "<group>"; };
+		822175BD825B5BA7FDE453CE010CAC84 /* Pods-TangoSampleAppNotificationExtension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TangoSampleAppNotificationExtension-resources.sh"; sourceTree = "<group>"; };
+		8E654165D80FCDA48F67A0BDC5F0D9B2 /* Pods-TangoSampleAppNotificationExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TangoSampleAppNotificationExtension-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BA1C80B0F7D0CBAE8B6F72076EF77363 /* Pods-TangoSampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TangoSampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		BAC56CE25E68DD05061D2557EB62EC99 /* Pods-TangoSampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TangoSampleApp-resources.sh"; sourceTree = "<group>"; };
+		9548495768AC0BD314912AB2AC5C8A6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B653756E299EF26EB3532814FBF5DDDC /* Pods-TangoSampleAppNotificationExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TangoSampleAppNotificationExtension-umbrella.h"; sourceTree = "<group>"; };
+		C67029CBC424EAA11A2DFD21AF1B1EDA /* Pods-TangoSampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TangoSampleApp-dummy.m"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EA77D26FF9C05294A6F5F48BAA6AD5BC /* Pods-TangoSampleApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TangoSampleApp-frameworks.sh"; sourceTree = "<group>"; };
-		F5008C54CE9EE61D165D31264D484FAE /* Pods-TangoSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0BE18E778779422916143FAE3FC070 /* Pods-TangoSampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TangoSampleApp-umbrella.h"; sourceTree = "<group>"; };
+		EEC2A83A45ECC8B22E8127229BDA67FD /* Pods-TangoSampleAppNotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TangoSampleAppNotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E42EB5B473F618B591D168CFA69D52 /* Pods-TangoSampleApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TangoSampleApp-frameworks.sh"; sourceTree = "<group>"; };
+		FCF0AB8EB4AFABC7818F91B6823FA929 /* Pods-TangoSampleAppNotificationExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TangoSampleAppNotificationExtension-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CCC41846B130BB5203B75B8E7E84C361 /* Frameworks */ = {
+		49D1EE51F0CDEE581A55EFC14D21F690 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B9E42D83F6EC0D26DF268F71D6D3EAD /* Foundation.framework in Frameworks */,
+				EE3F85ECD56C60272BC94891AF044817 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B652C7A611E5CC64A39F2091E3678C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2C3F3048E27C1D9B9A9BB61D7A6510 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36A70F657B0140AAFBC19A773C9366BE /* Targets Support Files */ = {
+		58D3A1A7A59FBFDADA2C80BC39D96201 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9FB29FD5F23F57F097293DAC28038D2C /* Pods-TangoSampleApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		4261E29176309A4837CFE0BE4841C3F5 /* Tango */ = {
-			isa = PBXGroup;
-			children = (
-				7004502A3DD00EC4B964A55B3A577C5D /* Frameworks */,
-				F0881E54F83E3D0228E098556336644F /* Resources */,
-			);
-			name = Tango;
-			path = Tango;
-			sourceTree = "<group>";
-		};
-		49B85A0688E510888DA5832AD2AEF33C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				419ED50D2CF1026210513ACA58D01D01 /* libPods-TangoSampleApp.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6765DC1D7C5AB0D5EE7E0A71FC3549A3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4261E29176309A4837CFE0BE4841C3F5 /* Tango */,
+				A92CB064A013069DB3FCBBEF3D53854E /* Tango */,
+				7B25FB755498C7D1354789B89A77ECF4 /* TangoRichNotification */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		7004502A3DD00EC4B964A55B3A577C5D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				50F3B70C0C2E378B0221E4F581510D3E /* Tango.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -88,27 +80,73 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		7B25FB755498C7D1354789B89A77ECF4 /* TangoRichNotification */ = {
+			isa = PBXGroup;
+			children = (
+				A8F2BC3459C1643B1CF824118AAE23C2 /* Frameworks */,
+			);
+			name = TangoRichNotification;
+			path = TangoRichNotification;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6765DC1D7C5AB0D5EE7E0A71FC3549A3 /* Pods */,
-				49B85A0688E510888DA5832AD2AEF33C /* Products */,
-				36A70F657B0140AAFBC19A773C9366BE /* Targets Support Files */,
+				58D3A1A7A59FBFDADA2C80BC39D96201 /* Pods */,
+				D1BD6088580FEC7C18FA8BA50F5EEA8E /* Products */,
+				A546A1818B53B5B7B8635F0318DFE2A8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9FB29FD5F23F57F097293DAC28038D2C /* Pods-TangoSampleApp */ = {
+		A546A1818B53B5B7B8635F0318DFE2A8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B7B5993133722FEC875D9D55701C50F /* Pods-TangoSampleApp-acknowledgements.markdown */,
-				BA1C80B0F7D0CBAE8B6F72076EF77363 /* Pods-TangoSampleApp-acknowledgements.plist */,
-				815A05B0A71EF1502F987EF06D171F6B /* Pods-TangoSampleApp-dummy.m */,
-				EA77D26FF9C05294A6F5F48BAA6AD5BC /* Pods-TangoSampleApp-frameworks.sh */,
-				BAC56CE25E68DD05061D2557EB62EC99 /* Pods-TangoSampleApp-resources.sh */,
-				F5008C54CE9EE61D165D31264D484FAE /* Pods-TangoSampleApp.debug.xcconfig */,
-				44F210C3D0AAEE5AD630617C8D7DEC85 /* Pods-TangoSampleApp.release.xcconfig */,
+				AF7A141608E638141257C2A3A639A059 /* Pods-TangoSampleApp */,
+				EFCA44820CF1EC5159AB76069EF10C70 /* Pods-TangoSampleAppNotificationExtension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A8F2BC3459C1643B1CF824118AAE23C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23E9203BB1FDE796E62D3130A1CE845F /* TangoRichNotification.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A92CB064A013069DB3FCBBEF3D53854E /* Tango */ = {
+			isa = PBXGroup;
+			children = (
+				A94AD6A4C615E0D8F782044824FDB79D /* Frameworks */,
+			);
+			name = Tango;
+			path = Tango;
+			sourceTree = "<group>";
+		};
+		A94AD6A4C615E0D8F782044824FDB79D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21B469801BE599E7BE94B4691A1456FD /* Tango.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF7A141608E638141257C2A3A639A059 /* Pods-TangoSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				9548495768AC0BD314912AB2AC5C8A6E /* Info.plist */,
+				821E680B3071B56BE2532C960FAAC1E9 /* Pods-TangoSampleApp.modulemap */,
+				77A8EA0F9F5CAD279E03C3FD49BB0BD1 /* Pods-TangoSampleApp-acknowledgements.markdown */,
+				7C4A604FEFE22D902087D401DC761B02 /* Pods-TangoSampleApp-acknowledgements.plist */,
+				C67029CBC424EAA11A2DFD21AF1B1EDA /* Pods-TangoSampleApp-dummy.m */,
+				F8E42EB5B473F618B591D168CFA69D52 /* Pods-TangoSampleApp-frameworks.sh */,
+				0CB76A536042B09C515F4E9D767B4581 /* Pods-TangoSampleApp-resources.sh */,
+				DB0BE18E778779422916143FAE3FC070 /* Pods-TangoSampleApp-umbrella.h */,
+				0BD192DA2E31BA4F39638559527B9245 /* Pods-TangoSampleApp.debug.xcconfig */,
+				3D1F1412C735728574E0489BA192E1F6 /* Pods-TangoSampleApp.release.xcconfig */,
 			);
 			name = "Pods-TangoSampleApp";
 			path = "Target Support Files/Pods-TangoSampleApp";
@@ -122,23 +160,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0881E54F83E3D0228E098556336644F /* Resources */ = {
+		D1BD6088580FEC7C18FA8BA50F5EEA8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9233ACEDDA1B82F27A0CE2A39BCEC964 /* Tango.bundle */,
+				296E6836F82CB0CCB47D94C5E746E8D8 /* Pods_TangoSampleApp.framework */,
+				381DF0ABCE7BA5937FA19578E8380302 /* Pods_TangoSampleAppNotificationExtension.framework */,
 			);
-			name = Resources;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCA44820CF1EC5159AB76069EF10C70 /* Pods-TangoSampleAppNotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5C3BEB114CF6A457EAA2B707FC1C278A /* Info.plist */,
+				01FF77ABB365589CCABCAAEE74107553 /* Pods-TangoSampleAppNotificationExtension.modulemap */,
+				21E54439C51161BC6325FBDD5C82A6DF /* Pods-TangoSampleAppNotificationExtension-acknowledgements.markdown */,
+				FCF0AB8EB4AFABC7818F91B6823FA929 /* Pods-TangoSampleAppNotificationExtension-acknowledgements.plist */,
+				8E654165D80FCDA48F67A0BDC5F0D9B2 /* Pods-TangoSampleAppNotificationExtension-dummy.m */,
+				822175BD825B5BA7FDE453CE010CAC84 /* Pods-TangoSampleAppNotificationExtension-resources.sh */,
+				B653756E299EF26EB3532814FBF5DDDC /* Pods-TangoSampleAppNotificationExtension-umbrella.h */,
+				EEC2A83A45ECC8B22E8127229BDA67FD /* Pods-TangoSampleAppNotificationExtension.debug.xcconfig */,
+				7AB8385AD2A2CD2019226418CD73257D /* Pods-TangoSampleAppNotificationExtension.release.xcconfig */,
+			);
+			name = "Pods-TangoSampleAppNotificationExtension";
+			path = "Target Support Files/Pods-TangoSampleAppNotificationExtension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		644D7657E0ED59D2D31374E9DDF9534B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F53E9D8A5681BA97969E378235A2C4B /* Pods-TangoSampleApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C113E33000E47A2B524365BED21149F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				861FC82E16FF08F333619E2E20E90C6D /* Pods-TangoSampleAppNotificationExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1CA484D8D6E2DA87F36E8F6C1827EA81 /* Pods-TangoSampleApp */ = {
+		154D0178E6FF74F2DDDA32AA88DBFD9C /* Pods-TangoSampleAppNotificationExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A897A1D006CD95F9E1BE63A0BEB6A699 /* Build configuration list for PBXNativeTarget "Pods-TangoSampleApp" */;
+			buildConfigurationList = 0DE00E77EF67553F90A1C8950FF27250 /* Build configuration list for PBXNativeTarget "Pods-TangoSampleAppNotificationExtension" */;
 			buildPhases = (
-				5CC82E644BBC77418F402A0A3905A759 /* Sources */,
-				CCC41846B130BB5203B75B8E7E84C361 /* Frameworks */,
+				5E392E55CEFA5D28F7D86BE59CE4368A /* Sources */,
+				5B652C7A611E5CC64A39F2091E3678C5 /* Frameworks */,
+				8C113E33000E47A2B524365BED21149F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TangoSampleAppNotificationExtension";
+			productName = "Pods-TangoSampleAppNotificationExtension";
+			productReference = 381DF0ABCE7BA5937FA19578E8380302 /* Pods_TangoSampleAppNotificationExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6394BB445E584CB0884D78C0B799BBBE /* Pods-TangoSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12711C72F63E2E66766D24164B3741DF /* Build configuration list for PBXNativeTarget "Pods-TangoSampleApp" */;
+			buildPhases = (
+				53A4B607112DF39668AE060A277BFCAB /* Sources */,
+				49D1EE51F0CDEE581A55EFC14D21F690 /* Frameworks */,
+				644D7657E0ED59D2D31374E9DDF9534B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -146,8 +239,8 @@
 			);
 			name = "Pods-TangoSampleApp";
 			productName = "Pods-TangoSampleApp";
-			productReference = 419ED50D2CF1026210513ACA58D01D01 /* libPods-TangoSampleApp.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 296E6836F82CB0CCB47D94C5E746E8D8 /* Pods_TangoSampleApp.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -166,28 +259,183 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 49B85A0688E510888DA5832AD2AEF33C /* Products */;
+			productRefGroup = D1BD6088580FEC7C18FA8BA50F5EEA8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CA484D8D6E2DA87F36E8F6C1827EA81 /* Pods-TangoSampleApp */,
+				6394BB445E584CB0884D78C0B799BBBE /* Pods-TangoSampleApp */,
+				154D0178E6FF74F2DDDA32AA88DBFD9C /* Pods-TangoSampleAppNotificationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5CC82E644BBC77418F402A0A3905A759 /* Sources */ = {
+		53A4B607112DF39668AE060A277BFCAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0DC67503143F4D11AC6ABBC965807A /* Pods-TangoSampleApp-dummy.m in Sources */,
+				FEB3B2219249938D7B635821BC4B057F /* Pods-TangoSampleApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E392E55CEFA5D28F7D86BE59CE4368A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883EBB0E15C22B367694400FC52BEAC0 /* Pods-TangoSampleAppNotificationExtension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
+		22BDF6C7B23B5C7FFCFF673E5BEB5068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1F1412C735728574E0489BA192E1F6 /* Pods-TangoSampleApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TangoSampleApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TangoSampleApp/Pods-TangoSampleApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TangoSampleApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2AD7E2FF385C0F1F4B35E85717598BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB8385AD2A2CD2019226418CD73257D /* Pods-TangoSampleAppNotificationExtension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TangoSampleAppNotificationExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TangoSampleAppNotificationExtension/Pods-TangoSampleAppNotificationExtension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TangoSampleAppNotificationExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A691069037FDD2C43A94CDD1BA1E8577 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD192DA2E31BA4F39638559527B9245 /* Pods-TangoSampleApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TangoSampleApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TangoSampleApp/Pods-TangoSampleApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TangoSampleApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -231,109 +479,68 @@
 			};
 			name = Debug;
 		};
-		3DE4027FC5C00B550F9527FBC9795C0D /* Release */ = {
+		F61996E1FC6B249F5A1A5D56DC6D6E61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44F210C3D0AAEE5AD630617C8D7DEC85 /* Pods-TangoSampleApp.release.xcconfig */;
+			baseConfigurationReference = EEC2A83A45ECC8B22E8127229BDA67FD /* Pods-TangoSampleAppNotificationExtension.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B9C4031FC0FF19311D6A96A1D083F1E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5008C54CE9EE61D165D31264D484FAE /* Pods-TangoSampleApp.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = "Target Support Files/Pods-TangoSampleAppNotificationExtension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TangoSampleAppNotificationExtension/Pods-TangoSampleAppNotificationExtension.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_TangoSampleAppNotificationExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		0DE00E77EF67553F90A1C8950FF27250 /* Build configuration list for PBXNativeTarget "Pods-TangoSampleAppNotificationExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
-				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
+				F61996E1FC6B249F5A1A5D56DC6D6E61 /* Debug */,
+				2AD7E2FF385C0F1F4B35E85717598BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A897A1D006CD95F9E1BE63A0BEB6A699 /* Build configuration list for PBXNativeTarget "Pods-TangoSampleApp" */ = {
+		12711C72F63E2E66766D24164B3741DF /* Build configuration list for PBXNativeTarget "Pods-TangoSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9C4031FC0FF19311D6A96A1D083F1E4 /* Debug */,
-				3DE4027FC5C00B550F9527FBC9795C0D /* Release */,
+				A691069037FDD2C43A94CDD1BA1E8577 /* Debug */,
+				22BDF6C7B23B5C7FFCFF673E5BEB5068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

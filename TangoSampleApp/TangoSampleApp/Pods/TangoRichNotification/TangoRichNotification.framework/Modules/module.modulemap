@@ -1,0 +1,10 @@
+framework module TangoRichNotification {
+  umbrella header "TangoRichNotification.h"
+
+  export *
+  module * { export * }
+}
+
+module TangoRichNotification.Swift {
+    header "TangoRichNotification-Swift.h"
+}

@@ -1,10 +1,18 @@
-# Uncomment this line to define a global platform for your project
+# Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'TangoSampleApp' do
-  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-pod 'Tango', '~> 0.8.1'
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+	pod 'Tango', '~> 1.0.0'
   # Pods for TangoSampleApp
+
+end
+
+target 'TangoSampleAppNotificationExtension' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+	pod 'TangoRichNotification', '~> 1.0.0'
+  # Pods for TangoSampleAppNotificationExtension
 
 end

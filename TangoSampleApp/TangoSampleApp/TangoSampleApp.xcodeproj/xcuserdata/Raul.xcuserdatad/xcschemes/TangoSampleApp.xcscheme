@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4FE7BB01DC76C2F007EED9F"
+               BlueprintIdentifier = "C4A1F3FA1E80370A0010D1EC"
                BuildableName = "TangoSampleApp.app"
                BlueprintName = "TangoSampleApp"
                ReferencedContainer = "container:TangoSampleApp.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4FE7BB01DC76C2F007EED9F"
+            BlueprintIdentifier = "C4A1F3FA1E80370A0010D1EC"
             BuildableName = "TangoSampleApp.app"
             BlueprintName = "TangoSampleApp"
             ReferencedContainer = "container:TangoSampleApp.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4FE7BB01DC76C2F007EED9F"
+            BlueprintIdentifier = "C4A1F3FA1E80370A0010D1EC"
             BuildableName = "TangoSampleApp.app"
             BlueprintName = "TangoSampleApp"
             ReferencedContainer = "container:TangoSampleApp.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4FE7BB01DC76C2F007EED9F"
+            BlueprintIdentifier = "C4A1F3FA1E80370A0010D1EC"
             BuildableName = "TangoSampleApp.app"
             BlueprintName = "TangoSampleApp"
             ReferencedContainer = "container:TangoSampleApp.xcodeproj">

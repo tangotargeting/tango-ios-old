@@ -1,0 +1,10 @@
+framework module Tango {
+  umbrella header "Tango.h"
+
+  export *
+  module * { export * }
+}
+
+module Tango.Swift {
+    header "Tango-Swift.h"
+}
