@@ -12,11 +12,11 @@ For more information please see [the website][1].
 
 ## Installation
 ### Install manually
-1. Download latest version of Tango framework from [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/tangotargeting/tango-ios/tree/master/Tango.framework).
+1. Download latest version of Tango framework from [here](https://github.com/tangotargeting/tango-ios/tree/master/Tango.framework).
 2. Drag Tango.framework file into the root project group.
 3. Add Tango framework to Embedded binaries. Go to your_projectTarget -> General and hit + button from Embedded Binaries to add Tango framework.
 4. Created an iOS 10 NotificationServiceExtension using [iOS 10 Rich Notifications guide](#ios-10-rich-notifications) from this file.
-5. Download [TangoRichNotification.framework](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/tangotargeting/TangoRichNotifications/tree/master/TangoRichNotification.framework)
+5. Download [TangoRichNotification.framework](https://github.com/tangotargeting/TangoRichNotifications/tree/master/TangoRichNotification.framework)
 5. Drag TangoRichNotification.framework into your notification extension group.
 6. Strip the framework before App Store submission, read [this](#strip-framework-before-app-store-submission) guide for more details.
 
@@ -51,12 +51,6 @@ $ pod install
 
 Close your project, go to your project location on disk and open the workspace the newly created `.xcworkspace` file inside your project directory. Now the framework can be used, and for that please follow "How to use" guide.
 
-## Strip Framework before App Store submission
-This is an universal framework, so due to [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) we need to strip framework for unused architectures, for that go to BuilPhases add a new “Run Script Phase” in your app’s target and paste the following snippet in the script text field:
-
-```
-bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tango.framework/Scripts/strip-simulator-arch.sh"
-```
 
 ### iOS 10 Rich Notifications
 
@@ -65,21 +59,22 @@ The library has support for iOS 10 notifications attachments, you can add images
 Create a new iOS target in Xcode (File -> New -> Target) and select the Notification Service Extension type
 ![NotificationServiceExtension image](https://github.com/tangotargeting/tango-ios/blob/master/Resources/NotificationServiceExtension.png?raw=true)
 
-## For CocoaPods only
-Add in your podfile the new target for notification extension and add TangoRichNotification framework, to do this add the following lines to your podspec:
+****For CocoaPods only****
+
+Add a new target for notification extension in your podfile. Add TangoRichNotification framework, by adding the following lines to your podspec:
 ```
 target 'NotificationServiceExtesion-Target-Name' do
 use_frameworks!
 pod 'TangoRichNotification', '~> 1.0.0'
 end
 ```
-After filling Podfile save it and run following command in the Terminal:
+After filling Podfile save it and run the following command in the Terminal:
 
 ```
 $ pod install
 ```
 
-Now the framework for iOS 10 notification can be used in notification service extension, and for that please follow “How to use” guide.
+iOS 10 Notification Framework installed.
 
 ### Add capabilities
 
@@ -103,7 +98,7 @@ Go to [Apple Developer Members Center](https://developer.apple.com/account/ios/c
 3. Click edit button, go to Push Notifications section and press the button create certificate for distribution or development.![CreateCertificate image](https://github.com/tangotargeting/tango-ios/blob/master/Resources/Create%20Certificate.png?raw=true) Follow up the instructions to create an Certificate Signing Request (CSR) file from your Mac. And press continue.
 4. Upload the CSR and after that press download to get the Certificate.
 5. Open the certificate. Opening the certificate will open Keychain Access.
-6. Select your certificate from  Keychain Access in My Certificates section, if the certificate is not here try in Certificate section. Right clik on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle". 
+6. Select your certificate from  Keychain Access in My Certificates section. If the certificate is not here try in Certificate section. Right clik on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle". 
 This command will export the certificate in a .p12 file with a password.
 
 ### Add Certificate to Tango
@@ -119,9 +114,9 @@ After that you should fill the form with your app data:
 
 ![AddCertificate image](https://github.com/tangotargeting/tango-ios/blob/master/Resources/Add%20Certificate.png?raw=true)
 
-# <a name="how-to"></a>How to use
+# How to use
 
-After adding the framework into the project by following the installation guide, for using the framework you should follow this steps:
+After adding the framework into the project by following the installation guide, modify your source code to finalize the integration:
 
 **1.Tango framework**
 
@@ -129,21 +124,17 @@ After adding the framework into the project by following the installation guide,
 
 ``` objc
 import Tango
-```
-For iOS 10 you should also make another import: 
-
-``` objc
 import UserNotifications
 ```
-Also for iOS 10 only you should add UNUserNotificationCenterDelegate in app delegate: 
+
+Add UNUserNotificationCenterDelegate in app delegate: 
 ``` objc
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {}
 ```
 
-*2. In the `didFinishLaunchingWithOptions`, setup notification delegate (iOS 10 only) and initialize SDK with API key by using `initialize` method.*
+*2. In the `didFinishLaunchingWithOptions`, setup notification delegate and initialize SDK with API key by using `initialize` method.*
 
 ``` objc
-// iOS 10 only
 UNUserNotificationCenter.current().delegate = self
 
 // Initialize with API key
@@ -199,11 +190,14 @@ Tango.userNotificationCenter(center, willPresent: notification, withCompletionHa
 
 ``` objc
 func yourCustomMethod() {
-Tango.registerSegments(segments: ["firstSegment", "secondSegment"])
+	Tango.registerSegments(segments: ["firstSegment", "secondSegment"])
 }
 ```
 
-*5. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription.*
+__*5. If you are going to use a location campaign you need to add in your plist this key NSLocationAlwaysUsageDescription.*__
+
+
+
 
 **2. TangoRichNotification framework**
 
@@ -215,21 +209,26 @@ import TangoRichNotification
 *2. In `didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)` method remove:*
 ``` objc
 if let bestAttemptContent = bestAttemptContent {
-// Modify the notification content here...
-bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-contentHandler(bestAttemptContent)
+	// Modify the notification content here...
+	bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
+	contentHandler(bestAttemptContent)
 }
 ```
 and add 
 ``` objc
 if let bestAttemptContent = bestAttemptContent {
-TangoRichNotification.setupRichContent(content: bestAttemptContent, completionHandler: { (content) in
-contentHandler(content)
-})
+	TangoRichNotification.setupRichContent(content: bestAttemptContent, completionHandler: { (content) in contentHandler(content)})
 }
 ```
 
 **3. Build and run :)**
+
+## Strip Framework before App Store submission
+This is an universal framework, so due to [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) we need to strip framework for unused architectures, for that go to BuilPhases add a new “Run Script Phase” in your app’s target and paste the following snippet in the script text field:
+
+```
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tango.framework/Scripts/strip-simulator-arch.sh"
+```
 
 ## License
 
