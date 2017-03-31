@@ -401,18 +401,18 @@ SWIFT_CLASS_NAMED("CampaignSpecifics")
 @class CampaignSpecificsKeywords;
 
 @interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
-- (void)addIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
-- (void)removeIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
-- (void)addIncludedKeywords:(NSSet * _Nonnull)values;
-- (void)removeIncludedKeywords:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
 - (void)addExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
 - (void)removeExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
 - (void)addExcludeKeywords:(NSSet * _Nonnull)values;
 - (void)removeExcludeKeywords:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
+- (void)addIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
+- (void)removeIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
+- (void)addIncludedKeywords:(NSSet * _Nonnull)values;
+- (void)removeIncludedKeywords:(NSSet * _Nonnull)values;
 @end
 
 
@@ -489,10 +489,17 @@ SWIFT_CLASS_NAMED("CampaignTargetsLocations")
 
 
 @interface CampaignTargetsLocations (SWIFT_EXTENSION(Tango))
+@end
+
+
+@interface CampaignTargetsLocations (SWIFT_EXTENSION(Tango))
 @property (nonatomic) double latitude;
+@property (nonatomic, copy) NSString * _Nullable locationID;
 @property (nonatomic) double longitude;
 @property (nonatomic) double meters;
-@property (nonatomic, copy) NSString * _Nullable locationID;
+@property (nonatomic) BOOL onEnter;
+@property (nonatomic) BOOL onExit;
+@property (nonatomic) int16_t onStay;
 @property (nonatomic, strong) CampaignTargets * _Nullable campaignTarget;
 @end
 
@@ -719,6 +726,36 @@ SWIFT_CLASS("_TtC5Tango15SessionDelegate")
 @end
 
 
+@interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDelegate>
+/**
+  Tells the delegate that the session has been invalidated.
+  \param session The session object that was invalidated.
+
+  \param error The error that caused invalidation, or nil if the invalidation was explicit.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+/**
+  Requests credentials from the delegate in response to a session-level authentication request from the
+  remote server.
+  \param session The session containing the task that requested authentication.
+
+  \param challenge An object that contains the request for authentication.
+
+  \param completionHandler A handler that your delegate method must call providing the disposition
+  and credential.
+
+*/
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(enum NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+/**
+  Tells the delegate that all messages enqueued for a session have been delivered.
+  \param session The session that no longer has any outstanding requests.
+
+*/
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+@end
+
+
 @interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDownloadDelegate>
 /**
   Tells the delegate that a download task has finished downloading.
@@ -767,36 +804,6 @@ SWIFT_CLASS("_TtC5Tango15SessionDelegate")
 
 */
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
-@end
-
-
-@interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDelegate>
-/**
-  Tells the delegate that the session has been invalidated.
-  \param session The session object that was invalidated.
-
-  \param error The error that caused invalidation, or nil if the invalidation was explicit.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-/**
-  Requests credentials from the delegate in response to a session-level authentication request from the
-  remote server.
-  \param session The session containing the task that requested authentication.
-
-  \param challenge An object that contains the request for authentication.
-
-  \param completionHandler A handler that your delegate method must call providing the disposition
-  and credential.
-
-*/
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(enum NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-/**
-  Tells the delegate that all messages enqueued for a session have been delivered.
-  \param session The session that no longer has any outstanding requests.
-
-*/
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 
