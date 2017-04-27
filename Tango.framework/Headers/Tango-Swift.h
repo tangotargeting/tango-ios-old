@@ -135,8 +135,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreData;
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
 @import UserNotifications;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -418,18 +418,18 @@ SWIFT_CLASS_NAMED("CampaignSpecifics")
 @class CampaignSpecificsKeywords;
 
 @interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
-- (void)addExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
-- (void)removeExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
-- (void)addExcludeKeywords:(NSSet * _Nonnull)values;
-- (void)removeExcludeKeywords:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
 - (void)addIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
 - (void)removeIncludedKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
 - (void)addIncludedKeywords:(NSSet * _Nonnull)values;
 - (void)removeIncludedKeywords:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CampaignSpecifics (SWIFT_EXTENSION(Tango))
+- (void)addExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
+- (void)removeExcludeKeywordsObject:(CampaignSpecificsKeywords * _Nonnull)value;
+- (void)addExcludeKeywords:(NSSet * _Nonnull)values;
+- (void)removeExcludeKeywords:(NSSet * _Nonnull)values;
 @end
 
 
@@ -621,30 +621,6 @@ SWIFT_CLASS("_TtC5Tango15SessionDelegate")
 @end
 
 
-@interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDelegate>
-/// Tells the delegate that the session has been invalidated.
-/// \param session The session object that was invalidated.
-///
-/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
-///
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-/// Requests credentials from the delegate in response to a session-level authentication request from the
-/// remote server.
-/// \param session The session containing the task that requested authentication.
-///
-/// \param challenge An object that contains the request for authentication.
-///
-/// \param completionHandler A handler that your delegate method must call providing the disposition
-/// and credential.
-///
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-/// Tells the delegate that all messages enqueued for a session have been delivered.
-/// \param session The session that no longer has any outstanding requests.
-///
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
-@end
-
-
 @interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDownloadDelegate>
 /// Tells the delegate that a download task has finished downloading.
 /// \param session The session containing the download task that finished.
@@ -685,6 +661,30 @@ SWIFT_CLASS("_TtC5Tango15SessionDelegate")
 /// If this header was not provided, the value is NSURLSessionTransferSizeUnknown.
 ///
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
+@end
+
+
+@interface SessionDelegate (SWIFT_EXTENSION(Tango)) <NSURLSessionDelegate>
+/// Tells the delegate that the session has been invalidated.
+/// \param session The session object that was invalidated.
+///
+/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
+///
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+/// Requests credentials from the delegate in response to a session-level authentication request from the
+/// remote server.
+/// \param session The session containing the task that requested authentication.
+///
+/// \param challenge An object that contains the request for authentication.
+///
+/// \param completionHandler A handler that your delegate method must call providing the disposition
+/// and credential.
+///
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+/// Tells the delegate that all messages enqueued for a session have been delivered.
+/// \param session The session that no longer has any outstanding requests.
+///
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 
@@ -832,6 +832,49 @@ SWIFT_CLASS("_TtC5Tango15SessionDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 @end
 
+@class TangoConfig;
+@class UIApplication;
+@class UIUserNotificationSettings;
+@class UILocalNotification;
+@class UNUserNotificationCenter;
+@class UNNotificationResponse;
+@class UNNotification;
+
+SWIFT_CLASS("_TtC5Tango5Tango")
+@interface Tango : NSObject
+/// This method is used for initialize the sdk with apiKey
+/// \param apiKey the apiKey string
+///
++ (void)initializeWithTango:(NSString * _Nonnull)apiKey;
++ (void)initializeWithTangoConfig:(TangoConfig * _Nonnull)tangoConfig;
+/// The Tango identifier for device.
++ (NSString * _Nonnull)identifier SWIFT_WARN_UNUSED_RESULT;
+/// Call this method only for versions of os smaller than 10.0
++ (void)application:(UIApplication * _Nonnull)application didRegister:(UIUserNotificationSettings * _Nonnull)notificationSettings;
++ (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
++ (void)application:(UIApplication * _Nonnull)application didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
++ (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
+/// Use this method when you have a custom trigger campaign on your device an you want to trigger it on your action.
+/// \param key the string that you defined as a triggerKey when you created the campaign.
+///
++ (void)triggerWithKey:(NSString * _Nonnull)key;
+/// Use this method to register new segments for your device.
+/// \param segments an array of strings, each strings represent a segment.
+///
++ (void)registerSegmentsWithSegments:(NSArray<NSString *> * _Nonnull)segments;
++ (void)application:(UIApplication * _Nonnull)application didReceive:(UILocalNotification * _Nonnull)notification;
++ (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceive:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
++ (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresent:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC5Tango11TangoConfig")
+@interface TangoConfig : NSObject
+- (nonnull instancetype)initWithApiKey:(NSString * _Nonnull)apiKey notificationAceess:(BOOL)notificationAceess locationAccess:(BOOL)locationAccess OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
 @class NSOperationQueue;
 
 /// The task delegate is responsible for handling all delegate callbacks for the underlying task as well as
@@ -845,6 +888,10 @@ SWIFT_CLASS("_TtC5Tango12TaskDelegate")
 /// The error generated throughout the lifecyle of the task.
 @property (nonatomic) NSError * _Nullable error;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+@interface UIApplication (SWIFT_EXTENSION(Tango))
 @end
 
 
