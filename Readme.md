@@ -217,7 +217,7 @@ if let bestAttemptContent = bestAttemptContent {
 and add 
 ``` objc
 if let bestAttemptContent = bestAttemptContent {
-	TangoRichNotification.setupRichContent(content: bestAttemptContent, completionHandler: { (content) in contentHandler(content)})
+            TangoRichNotification.setupRichContent(content: bestAttemptContent,  apiKey: "your-api-key", completionHandler: { (content) in contentHandler(content)})
 }
 ```
 
